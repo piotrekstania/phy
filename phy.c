@@ -34,4 +34,14 @@ double phyCalcAh(double temp, double rh) {
 
 double phyCalcDp(double temp, double rh) {
   
+  double h;
+  
+  if(temp < -20.0) temp = -20.0;
+  else if(temp > 50.0) temp = 50.0;
+  
+  if(rh < 0.0) rh = 0.0;
+  else if(rh > 100.0) rh = 100.0;
+  
+  h = ((log10(rh)-2.0)/0.4343) + ((17.62*temp)/(243.12+temp));
+  return (double)((243.12*h)/(17.62-h));
 }
