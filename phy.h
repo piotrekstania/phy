@@ -24,7 +24,24 @@ double phyCalcAh(double temp, double rh);
 double phyCalcDp(double temp, double rh);
 
 /*
-  Function calculates and returns pressure
+  Function calculates and returns pressure of liquid R410A.
+  Inputs over range will be cutted to min or max value.
+
+  arg 1: (double) temperature (-68..72 °C)
+  ret  : (double) absolute pressure (bar)
 */
+
+double phyCalcPresLiqR410A(double temp);
+
+/*
+  Function calculates and returns pressure of vapor R410A.
+  Inputs over range will be cutted to min or max value.
+
+  arg 1: (double) temperature (-68..72 °C)
+  ret  : (double) absolute pressure (bar)
+*/
+
+double phyCalcPresVapR410A(double temp);
+
 
 #endif //_phy_h
