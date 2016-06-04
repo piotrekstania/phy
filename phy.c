@@ -66,7 +66,7 @@ double phyCalcLiqPresR410A(double temp) {
   
   double X, Tr;
   
-  if(temp < -100.0) temp = -68.0;
+  if(temp < -100.0) temp = -100.0;
   else if(temp > 72.0) temp = 72.0;
   
   Tr = (temp+273.15)/Tc;
@@ -98,7 +98,7 @@ double phyCalcVapPresR410A(double temp) {
   
   double X, Tr;
   
-  if(temp < -100.0) temp = -68.0;
+  if(temp < -100.0) temp = -100.0;
   else if(temp > 72.0) temp = 72.0;
   
   Tr = (temp+273.15)/Tc;
