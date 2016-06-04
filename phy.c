@@ -91,7 +91,7 @@ double phyCalcPresVapR410A(double temp) {
   const double C = -0.5354309;
   const double D = -3.749023;
   const double E = -3.521484;
-  const double F = -7.75
+  const double F = -7.75;
   const double X0 = 0.2086902;
   const double Tc = 345.28;
   const double Pc = 4926.1;
