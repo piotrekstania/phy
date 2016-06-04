@@ -1,5 +1,5 @@
 #include "phy.h"
-#include <math.c>
+#include <math.h>
 
 /*
   Funkcja do obliczania wilgotnosci bezwzglednej z podanej temperatury
