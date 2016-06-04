@@ -2,13 +2,12 @@
 #include <math.h>
 
 /*
-  Funkcja do obliczania wilgotnosci bezwzglednej z podanej temperatury
-  i wilgotnosci wzglednej. Wartosci z poza zakresu beda przycinane
-  do wartosci granicznych.
+  Function returning absolute humidity.
+  Inputs over range will cut to min or max value.
   
-  arg 1: (double) temperatura (-20..50 °C)
-  arg 2: (double) wilgotnosc wzgledna (0..100 %)
-  ret  : (double) wilgotnosc bezwzgledna (g/m³)
+  arg 1: (double) temperature (-20..50 °C)
+  arg 2: (double) relative humidity (0..100 %)
+  ret  : (double) absolute humidity (g/m³)
 */
 
 double phyCalcAh(double temp, double rh) {
@@ -23,13 +22,12 @@ double phyCalcAh(double temp, double rh) {
 }
 
 /*
-  Funkcja do obliczania punktu rosy z podanej temperatury i wilgotnosci
-  wzglednej. Wartosci z poza zakresu beda przyciete do wartosci
-  granicznych.
+  Function returning absolute humidity.
+  Inputs over range will cut to min or max value.
   
-  arg 1: (double) temperatura (-20..50 °C)
-  arg 2: (double) wilgotnosc wzgledna (0..100 %)
-  ret  : (double) punkt rosy (°C)
+  arg 1: (double) temperature (-20..50 °C)
+  arg 2: (double) relative humidity (0..100 %)
+  ret  : (double) dew point (°C)
 */
 
 double phyCalcDp(double temp, double rh) {
