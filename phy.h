@@ -3,7 +3,7 @@
 
 /*
   Function calculates and returns absolute humidity.
-  Inputs over range will cut to min or max value.
+  Inputs over range will be cutted to min or max value.
   
   arg 1: (double) temperature (-20..50 °C)
   arg 2: (double) relative humidity (0..100 %)
@@ -14,7 +14,7 @@ double phyCalcAh(double temp, double rh);
 
 /*
   Function calculates and returns dew point.
-  Inputs over range will cut to min or max value.
+  Inputs over range will be cutted to min or max value.
   
   arg 1: (double) temperature (-20..50 °C)
   arg 2: (double) relative humidity (0..100 %)
@@ -24,7 +24,7 @@ double phyCalcAh(double temp, double rh);
 double phyCalcDp(double temp, double rh);
 
 /*
-  Function
+  Function calculates and returns pressure
 */
 
 #endif //_phy_h
