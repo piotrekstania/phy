@@ -72,7 +72,7 @@ double phyCalcPresLiqR410A(double temp) {
   Tr = (temp+273.15)/Tc;
   X  = (1.0-Tr)-X0;
   
-  return (double)(exp( (1.0/Tr) * (A + (B*X) + (C*pow(X,2)) + (D*pow(X,3)) + (E*pow(X,4)) + (F*pow(X,5)))  )*Pc/100.0);
+  return (double)(exp( 1.0/Tr*(A + (B*X) + (C*pow(X,2)) + (D*pow(X,3)) + (E*pow(X,4)) + (F*pow(X,5))))*Pc/100.0);
   
 }
 
@@ -104,6 +104,6 @@ double phyCalcPresVapR410A(double temp) {
   Tr = (temp+273.15)/Tc;
   X  = (1.0-Tr)-X0;
   
-  return (double)(exp( (1.0/Tr) * (A + (B*X) + (C*pow(X,2)) + (D*pow(X,3)) + (E*pow(X,4)) + (F*pow(X,5)))  )*Pc/100.0);
+  return (double)(exp( 1.0/Tr*(A + (B*X) + (C*pow(X,2)) + (D*pow(X,3)) + (E*pow(X,4)) + (F*pow(X,5))))*Pc/100.0);
   
 }
