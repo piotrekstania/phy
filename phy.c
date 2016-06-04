@@ -86,4 +86,24 @@ double phyCalcPresLiqR410A(double temp) {
 
 double phyCalcPresVapR410A(double temp) {
   
+  const double A = -1.440004;
+  const double B = -6.865265;
+  const double C = -0.5354309;
+  const double D = -3.749023;
+  const double E = -3.521484;
+  const double F = -7.75
+  const double X0 = 0.2086902;
+  const double Tc = 345.28;
+  const double Pc = 4926.1;
+  
+  double X, Tr;
+  
+  if(temp < -68.0) temp = -68.0;
+  else if(temp > 72.0) temp = 72.0;
+  
+  Tr = (temp+273.15)/Tc;
+  X  = (1.0-Tr)-X0;
+  
+  return (double)(exp( (1.0/Tr) * (A + (B*X) + (C*pow(X,2)) + (D*pow(X,3)) + (E*pow(X,4)) + (F*pow(X,5)))  )*Pc/100.0);
+  
 }
