@@ -48,11 +48,11 @@ double phyCalcDp(double temp, double rh) {
   Function calculates and returns pressure of liquid R410A.
   Inputs over range will be cutted to min or max value.
 
-  arg 1: (double) temperature (-68..72 °C)
+  arg 1: (double) temperature (-100..72 °C)
   ret  : (double) absolute pressure (bar)
 */
 
-double phyCalcPresLiqR410A(double temp) {
+double phyCalcLiqPresR410A(double temp) {
   
   const double A = -1.4376;
   const double B = -6.8715;
@@ -66,7 +66,7 @@ double phyCalcPresLiqR410A(double temp) {
   
   double X, Tr;
   
-  if(temp < -68.0) temp = -68.0;
+  if(temp < -100.0) temp = -68.0;
   else if(temp > 72.0) temp = 72.0;
   
   Tr = (temp+273.15)/Tc;
@@ -80,11 +80,11 @@ double phyCalcPresLiqR410A(double temp) {
   Function calculates and returns pressure of vapor R410A.
   Inputs over range will be cutted to min or max value.
 
-  arg 1: (double) temperature (-68..72 °C)
+  arg 1: (double) temperature (-100..72 °C)
   ret  : (double) absolute pressure (bar)
 */
 
-double phyCalcPresVapR410A(double temp) {
+double phyCalcVapPresR410A(double temp) {
   
   const double A = -1.440004;
   const double B = -6.865265;
@@ -98,7 +98,7 @@ double phyCalcPresVapR410A(double temp) {
   
   double X, Tr;
   
-  if(temp < -68.0) temp = -68.0;
+  if(temp < -100.0) temp = -68.0;
   else if(temp > 72.0) temp = 72.0;
   
   Tr = (temp+273.15)/Tc;
